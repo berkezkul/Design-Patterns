@@ -1,0 +1,31 @@
+Observer (Gözlemci) Tasarım Deseni, davranışsal (behavioral) tasarım desenlerinden biridir. Bu desen, bir nesnenin
+durumu değiştiğinde, bu değişiklikten haberdar olması gereken diğer nesneleri bilgilendirir. Bu desen, özellikle
+"publish/subscribe" mekanizmasını taklit eden durumlar için kullanılır. Yani bir nesne (yayıncı) bir olay meydana
+getirdiğinde, aboneleri (gözlemciler) bu olaya uygun şekilde tepki verirler.
+
+
+Observer Deseninin Özellikleri:
+Gözlemci (Observer): Bir olayı gözlemleyen ve bu olay hakkında bilgilendirilmek isteyen nesneler.
+Konu (Subject): Olayın gerçekleştiği nesne. Gözlemcileri bilgilendiren nesnedir.
+Abonelik (Subscription): Gözlemcilerin olayları takip etmek için kaydolduğu ve gerektiğinde çıkış yaptığı mekanizma.
+
+
+
+Observer Pattern Java'da Nasıl Çalışır?
+Observer Pattern, bir yayıncı (publisher) ve birden fazla abone (subscriber) arasında bir ilişki kurar. Bu ilişki, bir
+nesne üzerinde değişiklik olduğunda, diğer nesnelerin otomatik olarak haberdar edilmesini sağlar.
+
+Örnekte bir mağazadan yeni bir ürün aldığında e-posta veya mobil uygulama aracılığıyla müşterilere bildirim gönderen bir
+sistemi kodladım.
+
+
+
+Store & Customer Example/
+├── observers/
+│   ├── Observer.java                  # Gözlemci arayüzü (Subscriber)
+│   ├── EmailListener.java             # Somut gözlemci (Email aboneleri)
+│   └── MobileAppListener.java         # Somut gözlemci (Mobil uygulama aboneleri)
+├── subjects/
+│   ├── Subject.java                   # Konu (Publisher) arayüzü
+│   └── Store.java                     # Mağaza (Somut publisher)
+└── Main.java                          # Uygulama

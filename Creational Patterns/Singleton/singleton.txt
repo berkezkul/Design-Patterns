@@ -1,0 +1,25 @@
+1. Devlet ve Hükümet Örneği:
+Konu: Devlet yapısının, tıpkı bir Singleton gibi, sadece bir tane olması gerektiği vurgulanıyor. Bir ülkenin aynı anda
+birden fazla hükümeti olamayacağı gibi, yazılımda da bazı nesnelerin sadece bir kez oluşturulması gerektiği belirtiliyor.
+Açıklama: Bir ülkenin sadece bir tane merkezi hükümeti vardır ve bu hükümetten herkes yararlanır. Hükümet, ülkenin her
+noktasında uygulama üzerinde kontrol sağlar. Bu, Singleton Pattern’in ana fikridir: Yalnızca bir örnek ve her yerden
+erişilebilir olması.
+
+2. Veritabanı Bağlantısı Örneği:
+Konu: Veritabanı bağlantıları genellikle maliyetli işlemler içerir, dolayısıyla her yeni sorgu yapıldığında yeni bir
+bağlantı oluşturmak yerine, tek bir bağlantının kullanılması Singleton Pattern ile sağlanır.
+Açıklama: Bir veritabanına birden fazla bağlantı oluşturmak, kaynakları gereksiz yere tüketir. Bu yüzden sadece bir
+bağlantı oluşturulup tüm işlemler için bu bağlantı kullanılmalıdır. Singleton deseni, veritabanı bağlantısının yalnızca
+bir kez kurulmasını ve tekrar kullanılmasını sağlar.
+
+
+
+
+Özet:
+Hükümet Örneği: Bir ülkede tek bir hükümet vardır, Singleton deseni bunu temsil eder.
+Veritabanı Bağlantısı: Tek bir veritabanı bağlantısı oluşturulur ve bu bağlantı üzerinden tüm işlemler yürütülür.
+Her iki örnek de Singleton Pattern'in temel mantığını kullanarak kaynakların verimli şekilde yönetilmesini sağlıyor.
+
+
+
+

@@ -1,0 +1,23 @@
+StrategyMain Design Pattern (Strateji Tasarım Deseni), davranışsal (behavioral) tasarım desenlerinden biridir. Bu desen,
+bir sınıfın davranışını, çalışma zamanında değiştirebilmek için kullanılan bir yöntemdir. Bir davranışın farklı
+çeşitleri (stratejiler) olabilir ve bu çeşitler, interchangeable (değiştirilebilir) şekilde uygulanabilir.
+
+StrategyMain Pattern'in Temel Özellikleri:
+
+Bağımsız Strateji Sınıfları: Strateji tasarım deseni, bir algoritmayı birden fazla sınıfta tanımlamanıza olanak tanır.
+Çalışma Zamanında Değiştirilebilirlik: İstemci, hangi strateji ile çalışacağını çalışma zamanında belirleyebilir ve bu
+stratejiler birbirinin yerine kolayca kullanılabilir.
+Açık-Kapalı İlkesi: Yeni bir strateji eklendiğinde mevcut kodlar değiştirilmez, sadece yeni strateji sınıfları eklenir.
+
+Bir yemek teslimatı uygulamasında farklı ödeme yöntemleri (kredi kartı, PayPal) kullanarak StrategyMain
+Pattern ile ödeme yöntemlerini birbirinin yerine kullanılabilir hale getirdim. Farklı ödeme yöntemleri eklemek
+istediğimizde, mevcut sistemi bozmadan kolayca yeni ödeme yöntemleri ekleyebileceğiz.
+
+
+Yemeksepeti Payment Method Example/
+├── strategies/
+│   ├── PaymentStrategy.java              # Strateji arayüzü
+│   ├── PaymentByCreditCard.java          # Kredi kartı ile ödeme stratejisi
+│   ├── PaymentByPayPal.java              # PayPal ile ödeme stratejisi
+└── PaymentService.java                   # Bağlam (Context)
+└── Main.java                             # Uygulama

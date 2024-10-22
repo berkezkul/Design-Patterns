@@ -1,0 +1,24 @@
+Decorator Design Pattern (Dekoratör Tasarım Deseni), yapısal (structural) tasarım desenlerinden biridir ve mevcut bir nesneye yeni davranışlar eklemenize olanak tanır. Bu desenin en büyük avantajı, bir nesnenin yapısını değiştirmeden, çalışma zamanında dinamik olarak yeni işlevler ekleyebilmemizdir.
+
+Decorator Pattern'in Temel Özellikleri:
+Esneklik: Nesnelere, yeni işlevler eklemek için sınıfın değiştirilmesi gerekmez.
+Çalışma Zamanında Davranış Ekleme: Dekoratör patterni sayesinde, nesnelerin davranışlarını çalışma zamanında değiştirebiliriz.
+Kompozisyon Üzerinden Miras: Kompozisyon yoluyla nesneleri sarar (wrap) ve ek işlevler ekler. Bu sayede, sınıflar
+arasında büyük bir miras ağacı oluşturmaktan kaçınılır.
+Açık/Kapalı İlkesi: Nesnelere yeni işlevler eklerken var olan kodu değiştirmek zorunda kalmayız.
+Videodaki Örnek:
+Bir yemek dağıtım uygulamamız var ve bu uygulama, teslimat ve sipariş durumu gibi olaylar hakkında müşterilere
+bildirimler gönderiyor. Başlangıçta sadece e-posta bildirimleri gönderiliyordu, ancak müşteri talepleri arttıkça
+WhatsApp ve Facebook gibi platformlar üzerinden de bildirim göndermemiz gerekti. Dekoratör deseni sayesinde, yeni
+bildirim yöntemlerini mevcut sistemi bozmadan ekleyebileceğiz.
+
+
+
+Yemeksepeti Notification Sending Example/
+├── decorators/
+│   ├── BaseNotifierDecorator.java        # Temel Dekoratör
+│   ├── FacebookNotifierDecorator.java    # Facebook Bildirim Dekoratörü
+│   ├── WhatsAppNotifierDecorator.java    # WhatsApp Bildirim Dekoratörü
+└── Notifier.java                         # Ana Bildirim Sınıfı
+└── INotifier.java                        # Bildirim Arayüzü
+└── Main.java                             # Uygulama

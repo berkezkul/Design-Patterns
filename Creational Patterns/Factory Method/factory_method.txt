@@ -1,0 +1,24 @@
+Factory Method tasarım deseni, nesne oluşturma işlemini soyutlayarak uygulamanızdaki değişiklikleri minimuma indirir.
+Bu desen, hangi sınıfın nesnesi oluşturulacağının kararını alt sınıflara bırakır ve bu sayede kodda yapılan
+değişikliklerin minimum seviyede kalmasını sağlar.
+
+Örneğin bir burger restoranı için bir uygulama geliştiriyoruz. Restoranımızda farklı türlerde
+burgerler (BeefBurger, VeggieBurger, ChickenBurger etc.) sunuluyor. Başlangıçta bu burgerlerin her biri ayrı
+sınıflarla temsil ediliyor, ancak bu, uygulamanın yeni burger türleri eklendikçe değişiklik yapmasını zorlaştırıyor ve
+kodun "Açık-Kapalı İlkesi"ni (Open-Closed Principle) ihlal ediyor.
+
+Bu sorunu çözmek için, Factory Method desenini kullanıyoruz. Factory Method, yeni burger türleri eklendiğinde doğrudan
+kodu değiştirmek yerine alt sınıflar aracılığıyla yeni ürün türlerinin oluşturulmasını sağlar.
+
+Factory Method Deseni:
+
+Factory Method deseninde, iki ana bileşen bulunur:
+Creator (Yaratıcı) Sınıf: Ürünlerin nasıl oluşturulacağını soyutlar. Bizim örneğimizde, bu sınıf restoran olacaktır.
+Concrete Creator (Somut Yaratıcı) Sınıflar: Ürünleri oluşturan alt sınıflar. Her alt sınıf, kendi burger türünü oluşturur
+(örneğin, BeefBurgerRestaurant, VeggieBurgerRestaurant).
+
+Örneğin Yapısı:
+Ürün (Product) Arayüzü veya Soyut Sınıfı: Tüm burgerler bu sınıfı/arayüzü uygular.
+Somut Ürün (Concrete Product) Sınıfları: Her burger, bu arayüzü/sınıfı uygular.
+Creator Sınıfı: Burger oluşturma işlemini soyut bir metodla tanımlar.
+Concrete Creator Sınıfları: Burger oluşturma işlemini spesifik burger türlerine göre tanımlarlar.
