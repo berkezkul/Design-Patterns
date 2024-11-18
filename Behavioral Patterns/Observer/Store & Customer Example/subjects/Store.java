@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Store implements Subject {
+public class Store implements StoreSubject {
     private final Map<String, List<Observer>> observers = new HashMap<>();
 
     public Store() {
