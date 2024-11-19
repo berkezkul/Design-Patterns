@@ -1,13 +1,15 @@
+package Receiver;
+
 public class MediaPlayerApp {
-    void play() {
+    public void play() {
         System.out.println("Playing the media.");
     }
 
-    void pause() {
+    public void pause() {
         System.out.println("Pausing the media.");
     }
 
-    void stop() {
+    public void stop() {
         System.out.println("Stopping the media.");
     }
 }

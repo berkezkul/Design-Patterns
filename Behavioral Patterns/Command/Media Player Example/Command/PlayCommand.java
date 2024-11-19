@@ -1,4 +1,8 @@
-public class PlayCommand implements MediaPlayerCommand{
+package Command;
+
+import Receiver.MediaPlayerApp;
+
+public class PlayCommand implements MediaPlayerCommand {
 
     private MediaPlayerApp mediaPlayer;
 

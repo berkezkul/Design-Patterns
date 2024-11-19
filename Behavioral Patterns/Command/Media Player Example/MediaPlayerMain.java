@@ -1,3 +1,11 @@
+import Command.MediaPlayerCommand;
+import Command.PauseCommand;
+import Command.PlayCommand;
+import Command.StopCommand;
+import Invoker.MPRemoteControl;
+import Invoker.RemoteControl;
+import Receiver.MediaPlayerApp;
+
 public class MediaPlayerMain {
     public static void main(String[] args) {
         MediaPlayerApp mediaPlayer = new MediaPlayerApp();
@@ -10,7 +18,7 @@ public class MediaPlayerMain {
         MediaPlayerCommand stopCommand = new StopCommand(mediaPlayer);
 
         // Remote Control (Invoker)
-        RemoteControl remote = new RemoteControl();
+        MPRemoteControl remote = new MPRemoteControl();
 
         // Play
         remote.setCommand(playCommand);

@@ -1,4 +1,8 @@
-public class PauseCommand implements MediaPlayerCommand{
+package Command;
+
+import Receiver.MediaPlayerApp;
+
+public class PauseCommand implements MediaPlayerCommand {
 
     private MediaPlayerApp mediaPlayer;
 
