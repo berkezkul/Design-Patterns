@@ -3,7 +3,7 @@ import restaurants.VeggieBurgerRestaurant;
 import restaurants.ChickenBurgerRestaurant;
 import restaurants.Restaurant;
 
-public class Main {
+public class BurgerMain {
     public static void main(String[] args) {
         // BeefBurger restoranı
         Restaurant beefBurgerRestaurant = new BeefBurgerRestaurant();

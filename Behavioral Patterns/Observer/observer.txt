@@ -28,4 +28,4 @@ Store & Customer Example/
 ├── subjects/
 │   ├── Subject.java                   # Konu (Publisher) arayüzü
 │   └── Store.java                     # Mağaza (Somut publisher)
-└── Main.java                          # Uygulama
+└── BurgerMain.java                          # Uygulama

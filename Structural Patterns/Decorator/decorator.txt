@@ -21,4 +21,4 @@ Yemeksepeti Notification Sending Example/
 │   ├── WhatsAppNotifierDecorator.java    # WhatsApp Bildirim Dekoratörü
 └── Notifier.java                         # Ana Bildirim Sınıfı
 └── INotifier.java                        # Bildirim Arayüzü
-└── Main.java                             # Uygulama
+└── BurgerMain.java                             # Uygulama

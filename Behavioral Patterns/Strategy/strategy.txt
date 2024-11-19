@@ -20,4 +20,4 @@ Yemeksepeti Payment Method Example/
 │   ├── PaymentByCreditCard.java          # Kredi kartı ile ödeme stratejisi
 │   ├── PaymentByPayPal.java              # PayPal ile ödeme stratejisi
 └── PaymentService.java                   # Bağlam (Context)
-└── Main.java                             # Uygulama
+└── BurgerMain.java                             # Uygulama
