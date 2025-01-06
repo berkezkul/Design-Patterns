@@ -1,4 +1,4 @@
-public class CookieCaramelLatte extends Coffee{
+public class CookieCaramelLatte extends Coffee {
 
     public CookieCaramelLatte(){
         description = "Cookie Caramel Latte";

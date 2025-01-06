@@ -1,4 +1,4 @@
-public class Espresso extends Car{
+public class Espresso extends Coffee{
 
     public Espresso(){
         description = "Espresso";
