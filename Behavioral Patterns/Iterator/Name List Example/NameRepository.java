@@ -6,7 +6,7 @@ public class NameRepository implements Container{
         return new NameIterator();
     }
 
-    private class NameIterator implements Iterator {
+    private class NameIterator implements Iterator{
         int index;
 
         @Override
